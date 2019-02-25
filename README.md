@@ -69,7 +69,7 @@ These each hold the following contents:
 
 ## Analyses
 The folder `example-analyses` contains eamples how the data can be queried and further analysed:
-- `Count-post-languages.sql` 
+- https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Count-post-languages.sql
 - `Find-longest-threads.sql`
 - `Find-posts-per-author.sql` 
 
