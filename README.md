@@ -57,7 +57,7 @@ These each hold the following contents:
 ### Table `posts`
 - `post_id` (int, primary key): numeric ID of the geowebforum post (not linked to geowebforum.ch, but inherent to
 - `post_time` (text; SQLite has no datetime format): Timestamp of when the post was made. The timestamp follows the format `%Y-%m-%d %H:%M:00.000`.
-- `post_author` (text): Author of the post.
+- `post_author` (text): Hashed (encrypted) name of the author of the post.
 - `post_content` (text): Content of the post *complete with HTML tags*, i.e. `post_content` for example contains link targets.
 - `post_text` (text): Same as `post_content` but *with HTML code removed*. `post_text` corresponds to the text you see when you read a post in your browser.
 - `post_lang` (text): Most likely language of the post as detected using the Python package `langdetect`. Possible values are `de`, `fr`, `it` and `en` for German, French, Italian and English, respectively. Romansh / Rumantsch cannot be detected by `langdetect`.
