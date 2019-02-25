@@ -19,7 +19,6 @@ Core Python packages:
 - hashlib
 - pickle
 
-
 This code was developed and tested under Python 2.7 on a Mac OS X platform.
 
 ## Inputs
@@ -67,6 +66,12 @@ These each hold the following contents:
 - `en` (real): probability in the interval of 0 to 1 of the post being in English.
 - `thread_id` (int, foreign key): numeric ID of the geowebforum thread that contains this post.
 - `topic_id` (int, foreign key): numeric ID of the geowebforum topic that contains this post.
+
+## Analyses
+The folder `example-analyses` contains eamples how the data can be queried and further analysed:
+- `Count-post-languages.sql` 
+- `Find-longest-threads.sql`
+- `Find-posts-per-author.sql` 
 
 ## Final notes
 This code was written for a private project investigating the Swiss GIS community. It is definitely a bit rough around the edges, doesn't have proper logging or full-fledged exception handling.
