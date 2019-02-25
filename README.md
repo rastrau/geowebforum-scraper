@@ -69,9 +69,9 @@ These each hold the following contents:
 
 ## Analyses
 The folder `example-analyses` contains eamples how the data can be queried and further analysed:
-- https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Count-post-languages.sql
-- `Find-longest-threads.sql`
-- `Find-posts-per-author.sql` 
+- [Count-post-languages.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Count-post-languages.sql)
+- [Find-longest-threads.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Find-longest-threads.sql)
+- [Find-posts-per-author.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Find-posts-per-author.sql) 
 
 ## Final notes
 This code was written for a private project investigating the Swiss GIS community. It is definitely a bit rough around the edges, doesn't have proper logging or full-fledged exception handling.
