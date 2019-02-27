@@ -102,3 +102,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.Rproj.user/C2283E46/sources/s-C2D9A08C/lock_file
