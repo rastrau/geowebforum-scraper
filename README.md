@@ -83,7 +83,7 @@ The folder `example-analyses` contains the following examples how the data can b
 - [Find-longest-threads.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Find-longest-threads.sql)
 - [Find-posts-per-author.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Find-posts-per-author.sql) 
 
-The same folder also contains some examples of visualisations of simple content analyses carried out from within [R](https://www.r-project.org):
+The same folder also contains some examples of visualisations of simple content analyses carried out from within [R](https://www.r-project.org) (version 3.5.1):
 
 ![e-geo](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/e-geo-per-year--absolute.png "e-geo")
 ![geoig vs. geoiv](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/geoig-geoiv-per-year--absolute.png "geoig vs. geoiv")
