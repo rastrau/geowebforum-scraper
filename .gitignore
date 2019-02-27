@@ -103,3 +103,15 @@ venv.bak/
 # mypy
 .mypy_cache/
 .Rproj.user/C2283E46/sources/s-C2D9A08C/lock_file
+example-analyses/.Rproj.user/C2283E46/console06/INDEX001
+*.pper
+example-analyses/.Rproj.user/C2283E46/rmd-outputs
+example-analyses/.Rproj.user/C2283E46/saved_source_markers
+example-analyses/.Rproj.user/C2283E46/sources/per/t/2048FE69
+example-analyses/.Rproj.user/C2283E46/sources/per/t/2048FE69-contents
+example-analyses/.Rproj.user/C2283E46/sources/prop/116AB69F
+example-analyses/.Rproj.user/C2283E46/sources/prop/42CE7586
+example-analyses/.Rproj.user/C2283E46/sources/prop/8A491D04
+example-analyses/.Rproj.user/C2283E46/sources/prop/INDEX
+example-analyses/.Rproj.user/shared/notebooks/patch-chunk-names
+example-analyses/.Rproj.user/shared/notebooks/paths
