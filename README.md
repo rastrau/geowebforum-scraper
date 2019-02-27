@@ -90,6 +90,8 @@ The same folder also contains some examples of visualisations of simple content 
 ![geoig vs. geoiv](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/geoig-geoiv-per-year--absolute.png "geoig vs. geoiv")
 ![wfs, wms, wmts](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/wfs-wms-wmts-per-year--absolute.png "wfs, wms, wmts")
 ![shapefile, interlis, xml, csv (indexed)](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/shapefile-interlis-xml-csv-per-year--indexed.png "shapefile, interlis, xml, csv (indexed)")
+![open, smart, 3d](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/open-smart-3d-per-year--absolute.png "open, smart, 3d")
+![bim](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/bim-per-year--absolute.png "bim")
 
 ## Final notes
 This code was written for a private project investigating the Swiss GIS community. It is definitely a bit rough around the edges, doesn't have proper logging or full-fledged exception handling.
