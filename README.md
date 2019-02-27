@@ -5,6 +5,9 @@ This scraper retrieves [geowebforum.ch](https://geowebforum.ch) content, transfo
 
 The code is licensed under the [GNU General Public License v3.0](https://github.com/rastrau/geowebforum-scraper/blob/master/LICENSE). Conditions by [geowebforum](https://geowebforum.ch/benutzungsordnung.php) might apply for the data.
 
+## Collaboration
+If you'd like to further develop this code or talk about applications, I'm open. Please [get in touch through mail](mailto:ralph.straumann@gmail.com) or directly on GitHub.
+
 ## Dependencies and Development
 Non-core Python packages:
 - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup): A package for website scraping
@@ -26,6 +29,11 @@ The script requires no input. Important variables can (and should) be adjusted d
 
 - `db_path`: Here you can adjust the name of the output SQLite database.
 - `topics`: Here you can make adjustments if you are only interested in a subset of the topics on geowebforum.ch or if geowebfom.ch decides to add additional topics.
+
+## Usage
+
+Open a command line / shell in the `geowebforum-scraper` directory and issue the following command:
+`python scrape-geowebforum.py`
 
 ## Outputs
 The script creates an SQLite database named `data.sqlite` by default. You can further analyse the data in this database using any SQLite-compatible database client, such as [DBeaver](https://dbeaver.io), or, for example, Packages such as [RSQLite](https://db.rstudio.com/databases/sqlite/) to issue queries from within R.
@@ -68,10 +76,20 @@ These each hold the following contents:
 - `topic_id` (int, foreign key): numeric ID of the geowebforum topic that contains this post.
 
 ## Analyses
-The folder `example-analyses` contains eamples how the data can be queried and further analysed:
+Once you have scraped the contents of geowebforum.ch into an SQLite database, you can run some further analyses.
+
+The folder `example-analyses` contains the following examples how the data can be queried using any SQLite-compatible database client, such as [DBeaver](https://dbeaver.io):
 - [Count-post-languages.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Count-post-languages.sql)
 - [Find-longest-threads.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Find-longest-threads.sql)
 - [Find-posts-per-author.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Find-posts-per-author.sql) 
+
+The same folder also contains some examples of visualisations of simple content analyses carried out from within [R](https://www.r-project.org):
+
+![e-geo](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/e-geo-per-year--absolute.png "e-geo")
+![geoig vs. geoiv](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/geoig-geoiv-per-year--absolute.png "geoig vs. geoiv")
+![wfs, wms, wmts](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/wfs-wms-wmts-per-year--absolute.png "wfs, wms, wmts")
+![geoig vs. geoiv](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/geoig-geoiv-per-year--absolute.png "geoig vs. geoiv")
+![shapefile, interlis, xml, csv (indexed)](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/shapefile-interlis-xml-csv-per-year--indexed.png "shapefile, interlis, xml, csv (indexed)")
 
 ## Final notes
 This code was written for a private project investigating the Swiss GIS community. It is definitely a bit rough around the edges, doesn't have proper logging or full-fledged exception handling.
