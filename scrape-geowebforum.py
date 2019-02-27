@@ -7,7 +7,6 @@ import datetime
 import time
 import langdetect
 import hashlib
-import pickle
 from unidecode import unidecode
 
 
@@ -174,9 +173,6 @@ for topic_id in range(0, len(topics)):
 
 connection.commit()
 
-# Store the data as pickle file
-with open(vars.threads_pickle_file, 'wb') as f:
-    pickle.dump(all_threads, f)
 
 # Collect posts
 all_posts = []
