@@ -5,8 +5,8 @@ This folder collects avenues to analyse the contents of geowebforum.ch that were
 If you'd like to further develop these analyses or talk about applications, I'm open. Please [get in touch through mail](mailto:ralph.straumann@gmail.com) or directly on GitHub.
 
 ## Dependencies and Development
-- SQL files: none
-- R files: as stated in the files themselves. Packages are loaded (or installed, if necessary) at the beginning of the R scripts using the `if (!require(<package-name>)) { }` construct.
+- SQL files: no dependencies
+- R files: dependencies as stated in the files themselves. Packages are loaded (or installed, if necessary) at the beginning of the R scripts using the `if (!require(<package-name>)) { }` construct.
 
 The R code was developed and tested under R version 3.5.1. You can download R from [www.r-project.org](https://www.r-project.org).
 
