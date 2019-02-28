@@ -40,34 +40,34 @@ Some valid examples:
 
 Below you can see some examples that are included in the script already (I only included the visualisations of absolute numbers (non-indexed). But do make your own!
 
-#### The impulse program e-geo.ch that ran from 2003 to 2016
+### The impulse program e-geo.ch that ran from 2003 to 2016
 ![e-geo](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/e-geo-per-year--absolute.png "e-geo")
 
-#### The law
+### The law
 ![geoig vs. geoiv](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/geoig-geoiv-per-year--absolute.png "geoig vs. geoiv")
 
-#### 'Trendy' topics
+### 'Trendy' topics
 ![open, smart, 3d](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/open-smart-3d-per-year--absolute.png "open, smart, 3d")
 
-#### The trendiest topic, maybe?
+### The trendiest topic, maybe?
 ![bim](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/bim-per-year--absolute.png "bim")
 
-#### Data formats
+### Data formats
 ![shapefile, interlis, xml, csv](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/shapefile-interlis-xml-csv-per-year--absolute.png "shapefile, interlis, xml, csv")
 
-#### Standardisation: data models
+### Standardisation: data models
 ![mgdm, geodatenmodell](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/mgdm-geodatenmodell-per-year--absolute.png "mgdm, geodatenmodell")
 
-#### Services
+### Services
 ![wfs, wms, wmts](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/wfs-wms-wmts-per-year--absolute.png "wfs, wms, wmts")
 
-#### Events
+### Events
 ![geobeer, geosummit](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/geosummit-geobeer-per-year--absolute.png "geobeer, geosummit")
 
-#### The blog by EBP
+### The blog by EBP
 ![geo.ebp.ch](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/geo.ebp.ch-per-year--absolute.png "geo.ebp.ch")
 
-#### In which I stand no chance ;-)
+### In which I stand no chance ;-)
 ![keller, straumann](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/keller-straumann-per-year--absolute.png "keller, straumann")
 
 ## Final notes
