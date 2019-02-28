@@ -1,5 +1,5 @@
 # geowebforum-scraper: Example analyses
-This folder collects avenues to analyse the contents of geowebforum.ch that were scraped into an SQLite database using https://github.com/rastrau/geowebforum-scraper/blob/master/scrape-geowebforum.py.
+This folder collects avenues to analyse the contents of geowebforum.ch that were scraped into an SQLite database using [scrape-geowebforum.py](https://github.com/rastrau/geowebforum-scraper/blob/master/scrape-geowebforum.py).
 
 ## Collaboration
 If you'd like to further develop these analyses or talk about applications, I'm open. Please [get in touch through mail](mailto:ralph.straumann@gmail.com) or directly on GitHub.
