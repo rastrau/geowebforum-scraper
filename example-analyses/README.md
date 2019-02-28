@@ -22,9 +22,9 @@ The SQL script [Find-posts-per-author.sql](https://github.com/rastrau/geowebforu
 The SQL script [Count-post-languages.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Count-post-languages.sql) queries the database for languages of public posts (as classified using Python's `langdetect`) and counts them. You can use this script to analyse the representation of language regions in the forum.
 
 ### Content-analysis.R
-The script [Content-analysis.R](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Content-analysis.R) needs to be run from R (or RStudio with R installed). It uses the database and analyses the number of posts per year that mention a term or a set of terms. It then creates two graphs: One of the absolute number of posts mentioning the term(s) over time, and one of the some data where the data is indexed to the value of 1 in the year with the maximum number of mentions.
+The script [Content-analysis.R](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Content-analysis.R) needs to be run from R (or RStudio with R installed). It uses the database and analyses the number of posts per year that mention a term or a set of terms. It then creates two graphs: One of the absolute number of posts mentioning the term(s) over time, and one of the same data where the data is indexed to the value of 1 in the year with the maximum number of mentions.
 
-This script enables you to very easily run your own custom analyses. By adjusting the terms in the character vector on line 1 of the following snippet you can create your own visualizations (the analysis is case-insensitive):
+This script enables you to very easily run your own custom analyses! By only adjusting one line in the R script, namely the terms in the character vector on line 1 of the following snippet, you can create your own visualizations (the analysis is case-insensitive):
 
 ```
 terms <- c('geoig', 'geoiv')
