@@ -38,7 +38,7 @@ Some valid examples:
 `terms <- c('term1', 'term2')`
 `terms <- c('geo', 'gis', 'webgis')`
 
-Below you can see some examples that are included in the script already (I only included the visualisations of absolute numbers (non-indexed). But do make your own!
+Below you can see some examples that are included in the script already (I only included the visualisations of absolute numbers (i.e., non-indexed)). But do make your own!
 
 ### The impulse program e-geo.ch that ran from 2003 to 2016
 ![e-geo](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/e-geo-per-year--absolute.png "e-geo")
