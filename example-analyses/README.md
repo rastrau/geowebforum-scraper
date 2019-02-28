@@ -22,7 +22,7 @@ The SQL script [Find-posts-per-author.sql](https://github.com/rastrau/geowebforu
 The SQL script [Count-post-languages.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Count-post-languages.sql) queries the database for languages of public posts (as classified using Python's `langdetect`) and counts them. You can use this script to analyse the representation of language regions in the forum.
 
 ### Content-analysis.R
-This script needs to be run from R (or RStudio with R installed). It uses the database and analyses the number of posts per year that mention a term or a set of terms. It then creates two graphs: One of the absolute number of posts mentioning the term(s) over time, and one of the some data where the data is indexed to the value of 1 in the year with the maximum number of mentions.
+The script [Content-analysis.R](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Content-analysis.R) needs to be run from R (or RStudio with R installed). It uses the database and analyses the number of posts per year that mention a term or a set of terms. It then creates two graphs: One of the absolute number of posts mentioning the term(s) over time, and one of the some data where the data is indexed to the value of 1 in the year with the maximum number of mentions.
 
 This script enables you to very easily run your own custom analyses. By adjusting the terms in the character vector on line 1 of the following snippet you can create your own visualizations (the analysis is case-insensitive):
 
@@ -38,7 +38,7 @@ Some valid examples:
 `terms <- c('term1', 'term2')`
 `terms <- c('geo', 'gis', 'webgis')`
 
-Below you can see some examples that are included in the script already.
+Below you can see some examples that are included in the script already (I only included the visualisations of absolute numbers (non-indexed). But do make your own!
 
 #### The impulse program e-geo.ch that ran from 2003 to 2016
 ![e-geo](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/e-geo-per-year--absolute.png "e-geo")
@@ -53,7 +53,7 @@ Below you can see some examples that are included in the script already.
 ![bim](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/bim-per-year--absolute.png "bim")
 
 #### Data formats
-![shapefile, interlis, xml, csv (indexed)](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/shapefile-interlis-xml-csv-per-year--indexed.png "shapefile, interlis, xml, csv (indexed)")
+![shapefile, interlis, xml, csv](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/shapefile-interlis-xml-csv-per-year--absolute.png "shapefile, interlis, xml, csv")
 
 #### Standardisation: data models
 ![mgdm, geodatenmodell](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/mgdm-geodatenmodell-per-year--absolute.png "mgdm, geodatenmodell")
@@ -69,10 +69,6 @@ Below you can see some examples that are included in the script already.
 
 #### In which I stand no chance ;-)
 ![keller, straumann](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/keller-straumann-per-year--absolute.png "keller, straumann")
-
-
-
-
 
 ## Final notes
 This code was written for a private project investigating the Swiss GIS community. It is definitely a bit rough around the edges, doesn't have proper logging or full-fledged exception handling.
