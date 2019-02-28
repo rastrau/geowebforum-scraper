@@ -10,7 +10,7 @@ If you'd like to further develop these analyses or talk about applications, I'm 
 
 The R code was developed and tested under R version 3.5.1. You can download R from [www.r-project.org](https://www.r-project.org).
 
-## Example Results
+## Example Scripts and Results
 
 ### Find-longest-threads.sql
 The SQL script [Find-longest-threads.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Find-posts-per-author.sql) queries the database for threads and sorts them in descending order by the number of posts contained in each thread.
