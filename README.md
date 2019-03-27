@@ -62,7 +62,7 @@ These each hold the following contents:
 - `topic_id` (int, foreign key): numeric ID of the geowebforum topic that contains this thread.
 - `post_count` (int): Number of individual posts contained in the geowebforum topic.
 ### Table `posts`
-- `post_id` (int, primary key): numeric ID of the geowebforum post (not linked to geowebforum.ch, but inherent to
+- `post_id` (int, primary key): numeric ID of the geowebforum post (not linked to geowebforum.ch, but inherent to *geowebforum-scraper*).
 - `post_time` (text; SQLite has no datetime format): Timestamp of when the post was made. The timestamp follows the format `%Y-%m-%d %H:%M:00.000`.
 - `post_author` (text): Hashed (encrypted) name of the author of the post.
 - `post_content` (text): Content of the post *complete with HTML tags*, i.e. `post_content` for example contains link targets.
