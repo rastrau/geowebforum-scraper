@@ -33,4 +33,3 @@ jobs:
       with:
         commit_message: Update geowebforum.ch data
         branch: ${{ github.head_ref }}
-        file_pattern: *.sqlite
