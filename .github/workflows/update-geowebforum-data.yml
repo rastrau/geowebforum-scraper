@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout the repository
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
     
     - name: Set up Python 2.7
       uses: actions/setup-python@v2
@@ -29,7 +29,7 @@ jobs:
         
     # Commit to repo with updated file
     - name: Commit updated data to the repository
-    - uses: stefanzweifel/git-auto-commit-action@v4.1.1
+      uses: stefanzweifel/git-auto-commit-action@v4.1.1
       with:
         commit_message: Update geowebforum.ch data
         branch: ${{ github.head_ref }}
