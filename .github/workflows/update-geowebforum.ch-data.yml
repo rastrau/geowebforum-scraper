@@ -2,7 +2,7 @@ name: Update geowebforum data
 
 on:
   schedule:
-  - cron:  '*/10 * * * *'
+  - cron:  '0 */1 * * *'
 
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
     
     - name: Run Python script
       run: |
-        python scrape-geowebforum-test.py
+        python scrape-geowebforum.py
         
     # Commit to repo with updated file
     - name: Commit updated data to the repository
