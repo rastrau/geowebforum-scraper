@@ -1,4 +1,4 @@
-name: Update geowebforum.ch data
+name: Update geowebforum data
 
 on:
   schedule:
