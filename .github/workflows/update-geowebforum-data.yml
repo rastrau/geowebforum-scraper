@@ -2,7 +2,7 @@ name: Update geowebforum data
 
 on:
   schedule:
-  - cron:  '0 2 1 * *'
+  - cron:  '0 */4 * * *'
 
 jobs:
   build:
@@ -32,4 +32,3 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4.1.1
       with:
         commit_message: Update geowebforum.ch data
-        branch: ${{ github.head_ref }}
