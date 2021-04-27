@@ -6,7 +6,7 @@ This scraper retrieves [geowebforum.ch](https://geowebforum.ch) content, transfo
 The code is licensed under the [GNU General Public License v3.0](https://github.com/rastrau/geowebforum-scraper/blob/master/LICENSE). Conditions by [geowebforum](https://geowebforum.ch/benutzungsordnung.php) might apply for the data.
 
 ## Collaboration
-If you'd like to further develop this code or talk about applications, I'm open. Please [get in touch through mail](mailto:ralph.straumann@gmail.com) or directly on GitHub.
+If you'd like to further develop this code or talk about applications, I'm open. Please [get in touch through mail](mailto:mail@ralphstraumann.ch) or directly on GitHub.
 
 ## Dependencies and Development
 Non-core Python packages:
