@@ -85,15 +85,15 @@ The folder `example-analyses` contains the following examples how the data can b
 - [Find-longest-threads.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Find-longest-threads.sql)
 - [Find-posts-per-author.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Find-posts-per-author.sql) 
 
-The same folder also contains some examples of visualisations of simple content analyses carried out from within [R](https://www.r-project.org) (version 3.5.1):
+The same folder also contains some examples of visualisations of simple content analyses carried out from within [R](https://www.r-project.org) (version 3.5.1). 
+
+**Check the [Readme](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/README.md) for the examples for more information about these types of analyses.**
 
 ![geoig vs. geoiv](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/geoig-geoiv-per-year--absolute.png "geoig vs. geoiv")
 
 ![open, smart, 3d](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/open-smart-3d-per-year--absolute.png "open, smart, 3d")
 
 ![bim](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/bim-per-year--absolute.png "bim")
-
-See https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/README.md for more information about these types of analyses.
 
 ## Final notes
 This code was written for a private project investigating the Swiss GIS community. It is definitely a bit rough around the edges, doesn't have proper logging or full-fledged exception handling.
