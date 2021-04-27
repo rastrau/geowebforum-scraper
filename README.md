@@ -79,7 +79,6 @@ These each hold the following contents:
 - `topic_id` (int, foreign key): numeric ID of the geowebforum topic that contains this post.
 
 ## Analyses
-Once you have scraped the contents of geowebforum.ch into an SQLite database, you can run some further analyses.
 
 The folder `example-analyses` contains the following examples how the data can be queried using any SQLite-compatible database client, such as [DBeaver](https://dbeaver.io):
 - [Count-post-languages.sql](https://github.com/rastrau/geowebforum-scraper/blob/master/example-analyses/Count-post-languages.sql)
