@@ -31,7 +31,7 @@ The script requires no input. Important variables can (and should) be adjusted d
 
 ## Usage
 
-Open a command line / shell in the `geowebforum-scraper` directory and issue the following command:
+Set up and activate a Python environment using your preferred framework. Install dependencies specified in `requirements.txt`. Open a command line / shell in the `geowebforum-scraper` directory and issue the following command:
 
 `python scrape-geowebforum.py`
 
