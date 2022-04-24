@@ -24,7 +24,7 @@ Core Python packages:
 - time
 - hashlib
 
-This code was developed and tested under Python 2.7 (on a Mac OS X platform).
+**This code was developed and tested under Python 2.7 (on a Mac OS X platform).**
 
 ## Inputs
 The script requires no input. Important variables can (and should) be adjusted directly by editing the file `Variables.py`:
