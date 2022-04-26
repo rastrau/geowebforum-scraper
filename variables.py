@@ -24,7 +24,7 @@ class Variables:
         self.offset_step = 10
         
         # Sleep time between HTTP requests
-        self.sleep_time = 1
+        self.sleep_time = 0.2
 
         self.create_tbl_sql = {
             'topics': """ CREATE TABLE topics (
