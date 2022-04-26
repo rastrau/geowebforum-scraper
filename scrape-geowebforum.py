@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-import urllib2
+from urllib import request
+from urllib.error import HTTPError, URLError
 from bs4 import BeautifulSoup
 import variables
 import sqlite3
@@ -98,7 +99,7 @@ def ingest_post(cursor, post_id, post_time, post_author, post_content,
                 post_text, post_language, de, fr, it, en, thread_id,
                 topic_id):
     cursor.execute("INSERT INTO posts VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                   [post_id, post_time, post_author, unicode(post_content),
+                   [post_id, post_time, post_author, post_content.encode('utf-8'),
                     post_text, post_language, de, fr, it, en, thread_id, topic_id])
     return
 
@@ -131,24 +132,24 @@ for topic_id in range(0, len(topics)):
     topic_title = topics[topic_id][1]
     topic_url = topics[topic_id][2]
 
-    print '\nWorking on topic "%s"...' % topic_title
+    print('\nWorking on topic "%s"...' % topic_title)
     success = True
 
     offset = 0
     while(success):
         time.sleep(vars.sleep_time)
-        print '\n  Parsing URL with offset %s: %s&offset=%s...' % (offset,
+        print('\n  Parsing URL with offset %s: %s&offset=%s...' % (offset,
                                                                    topic_url,
-                                                                   offset)
+                                                                   offset))
         try:
-            page = urllib2.urlopen('%s&offset=%s' % (topic_url, offset))
-        except (urllib2.HTTPError, urllib2.URLError) as e:
-            print e.code
+            page = request.urlopen('%s&offset=%s' % (topic_url, offset))
+        except (HTTPError, URLError) as e:
+            print(e.reason)
             success = False
 
         soup = BeautifulSoup(page, 'lxml')
         thread_links = soup.find_all('a', {'class': ['threadtitle']})
-        print '  Found %s threads.' % len(thread_links)
+        print('  Found %s threads.' % len(thread_links))
 
         # Even when using too big an offset, geowebforum doesn't return an HTTP
         # error but an empty-ish page
@@ -175,24 +176,23 @@ connection.commit()
 
 
 # Collect posts
+post_id_counter = 1
 all_posts = []
-post_id = 1
 for (thread_id, thread_name, thread_url, topic_id) in all_threads:
-    time.sleep(vars.sleep_time)
-
-    print ''
+    print('')
     success = True
     offset = 0
     while(success):
         time.sleep(vars.sleep_time)
-        print 'Parsing thread %s with offset %s: %s&offset=%s...' % (thread_id,
-                                                                     offset,
-                                                                     thread_url,
-                                                                     offset)
+        print('Parsing thread %s out of %s with offset %s: %s&offset=%s...' % (thread_id,
+                                                                               len(all_threads),
+                                                                               offset,
+                                                                               thread_url,
+                                                                               offset))
         try:
-            thread_page = urllib2.urlopen('%s&offset=%s' % (thread_url, offset))
-        except (urllib2.HTTPError, urllib2.URLError) as e:
-            print e.code
+            thread_page = request.urlopen('%s&offset=%s' % (thread_url, offset))
+        except (HTTPError, URLError) as e:
+            print(e.reason)
             success = False
 
         thread_soup = BeautifulSoup(thread_page, 'lxml')
@@ -203,9 +203,9 @@ for (thread_id, thread_name, thread_url, topic_id) in all_threads:
         if len(posts) == 0:
             # We increased offset too much and found an empty page only
             success = False
-            print '  Found no more posts.'
+            print('  Found no more posts.')
         else:
-            print '  Parsing %s post(s)...' % (len(posts)/2)
+            print('  Parsing %s post(s)...' % (int(len(posts)/2)))
             for i in range(0, len(posts), 2):
                 # Find the author and the timestamp of this post
                 post_author = ''
@@ -223,33 +223,32 @@ for (thread_id, thread_name, thread_url, topic_id) in all_threads:
                 post_time = parse_timestamp(post_time)
 
                 content_div = posts[i+1]
-                post_content = content_div
+                post_content = content_div.encode('utf-8')
                 post_text = content_div.text.strip()
                 post_language, de, fr, it, en = detect_languages(post_text)
 
-                if isinstance(post_author, unicode):
-                    post_author = hashlib.sha256(unidecode(post_author)).hexdigest()
-                elif isinstance(post_author, str):
-                    post_author = hashlib.sha256(post_author).hexdigest()
+                post_author = hashlib.sha256(post_author.encode('utf-8')).hexdigest()
 
                 # Collect posts in a list. Because pagination is broken on some
                 # geowebforum pages, there are threads where certain posts appear
                 # on two pages. We can consolidate this list before transferring
                 # the data into the DB in order to solve this issue
-                all_posts.append((post_id, post_time, post_author, post_content,
+                all_posts.append((post_id_counter, post_time, post_author, post_content,
                                   post_text, post_language, de, fr, it, en, thread_id, topic_id))
 
-                post_id += 1
+                post_id_counter += 1
 
         offset += vars.offset_step
 
 # Make the posts unique. Necessity of this: see above comment.
 all_posts = list(set(all_posts))
 
-for (post_id, post_time, post_author, post_content, post_text, post_language, de,
-     fr, it, en, thread_id, topic_id) in all_posts:
-    ingest_post(cursor, post_id, post_time, post_author, post_content, post_text,
-                post_language, de, fr, it, en, thread_id, topic_id)
+print("\nIngesting posts data into database...")
+cursor.executemany("INSERT INTO posts VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                   all_posts)
+print("Committing...")
+connection.commit()
+print("Done.")
 
 write_metadata(cursor)
 

@@ -1,8 +1,6 @@
-BeautifulSoup==3.2.2
-beautifulsoup4==4.8.2
-bs4==0.0.1
-langdetect==1.0.7
-lxml==4.6.5
-six==1.14.0
-soupsieve==1.9.5
-Unidecode==1.1.1
+beautifulsoup4==4.11.1
+langdetect==1.0.9
+lxml==4.8.0
+six==1.16.0
+soupsieve==2.3.2
+Unidecode==1.3.4
