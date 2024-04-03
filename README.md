@@ -15,7 +15,6 @@ If you'd like to further develop this code or talk about applications, I'm open.
 Non-core Python packages:
 - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup): A package for website scraping
 - [langdetect](https://github.com/Mimino666/langdetect): A package for detecting the language of text
-- [unidecode](https://pypi.org/project/Unidecode): A package for deriving ASCII representations of unicode strings
 
 Core Python packages:
 - urllib2
