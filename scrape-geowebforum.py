@@ -7,10 +7,9 @@ import variables
 import sqlite3
 import datetime
 import time
-import langdetect
+from langdetect import detect_langs
 import hashlib
-from unidecode import unidecode
-
+from typing import Union
 
 vars = variables.Variables()
 topics = vars.topics
@@ -63,6 +62,14 @@ def setup_triggers(cursor):
                        END; """
     )
     return
+
+
+def hash_post_author(post_author: Union[str, bytes]) -> str:
+    if isinstance(post_author, str):
+        # Normalize Unicode characters to ASCII
+        post_author = post_author.encode("utf-8")
+    # Compute SHA-256 hash and return hexadecimal representation
+    return hashlib.sha256(post_author).hexdigest()
 
 
 def ingest_topics(cursor, topics=vars.topics):
@@ -134,7 +141,7 @@ def ingest_post(
             post_id,
             post_time,
             post_author,
-            unicode(post_content),
+            post_content,
             post_text,
             post_language,
             de,
@@ -153,8 +160,6 @@ def write_metadata(cursor, comments=""):
     now = datetime.datetime.strftime(now, "%Y-%m-%d %H:%M")
     cursor.execute("INSERT INTO metadata VALUES (?, ?)", [now, comments])
 
-
-from langdetect import detect_langs
 
 connection, cursor = connect_db()
 
@@ -278,11 +283,7 @@ for thread_id, thread_name, thread_url, topic_id in all_threads:
                 post_content = content_div
                 post_text = content_div.text.strip()
                 post_language, de, fr, it, en = detect_languages(post_text)
-
-                if isinstance(post_author, unicode):
-                    post_author = hashlib.sha256(unidecode(post_author)).hexdigest()
-                elif isinstance(post_author, str):
-                    post_author = hashlib.sha256(post_author).hexdigest()
+                post_author = hash_post_author(post_author)
 
                 # Collect posts in a list. Because pagination is broken on some
                 # geowebforum pages, there are threads where certain posts appear
