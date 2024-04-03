@@ -15,7 +15,6 @@ If you'd like to further develop this code or talk about applications, I'm open.
 Non-core Python packages:
 - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup): A package for website scraping
 - [langdetect](https://github.com/Mimino666/langdetect): A package for detecting the language of text
-- [unidecode](https://pypi.org/project/Unidecode): A package for deriving ASCII representations of unicode strings
 
 Core Python packages:
 - urllib2
@@ -24,7 +23,7 @@ Core Python packages:
 - time
 - hashlib
 
-**This code was developed and tested under Python 2.7 (on a Mac OS X platform). The [branch "py3"](https://github.com/rastrau/geowebforum-scraper/tree/py3) is a [preliminary version that runs under Python 3.9](https://github.com/rastrau/geowebforum-scraper/tree/py3).**
+**This code was developed and tested under Python 3.12.1.**
 
 ## Inputs
 The script requires no input. Important variables can (and should) be adjusted directly by editing the file `Variables.py`:
